@@ -19,49 +19,58 @@ export default function App() {
   console.log();
 
   return (
-    <div className="px-20 w-screen">
-      <table className="w-full table-fixed">
-        <thead>
-          <tr className="h-0 opacity-0">
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="h-fit text-white text-xl py-40">
-            {projects.map((project) => {
-              return (
-                <td
-                  className="text-center bg-gray-700 border-8 border-gray-900"
-                  colSpan={groupedProjects[project].length}
-                >
-                  <ul className="flex justify-around my-10">
-                    {groupedProjects[project].map((person) => {
-                      {
-                        console.log(person.name);
-                      }
+    <main className="grid text-white">
+      <div>
+        
+        <h1>Name</h1>
+        <div className="w-10 h-10 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
+        
+      </div>
+    </main>
 
-                      return (
-                        <li className="flex flex-col items-center">
-                          <h1>{person.name}</h1>
-                          <div className="w-10 h-10 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <h1 className="capitalize">{project}</h1>
-                </td>
-              );
-            })}
-            {console.log(projects)}
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    // <div className="px-20 w-screen">
+    //   <table className="w-full table-fixed">
+    //     <thead>
+    //       <tr className="h-0 opacity-0">
+    //         <td>1</td>
+    //         <td>2</td>
+    //         <td>3</td>
+    //         <td>4</td>
+    //         <td>5</td>
+    //         <td>6</td>
+    //         <td>7</td>
+    //       </tr>
+    //     </thead>
+    //     <tbody>
+    //       <tr className="h-fit text-white text-xl py-40">
+    //         {projects.map((project) => {
+    //           return (
+    //             <td
+    //               className="text-center bg-gray-700 border-8 border-gray-900"
+    //               colSpan={groupedProjects[project].length}
+    //             >
+    //               <ul className="flex justify-around mt-10 mb-5">
+    //                 {groupedProjects[project].map((person) => {
+    //                   {
+    //                     console.log(person.name);
+    //                   }
+
+    //                   return (
+    //                     <li className="flex flex-col items-center">
+    //                       <h1>{person.name}</h1>
+    //                       <div className="w-10 h-10 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
+    //                     </li>
+    //                   );
+    //                 })}
+    //               </ul>
+    //               <h1 className="capitalize mb-5">{project}</h1>
+    //             </td>
+    //           );
+    //         })}
+    //         {console.log(projects)}
+    //       </tr>
+    //     </tbody>
+    //   </table>
+    // </div>
   );
 }
