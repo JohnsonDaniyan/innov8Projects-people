@@ -45,8 +45,9 @@ export default function App() {
                       {
                         console.log(person.name);
                       }
+
                       return (
-                        <li>
+                        <li className="flex flex-col items-center">
                           <h1>{person.name}</h1>
                           <div className="w-10 h-10 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
                         </li>
@@ -57,6 +58,7 @@ export default function App() {
                 </td>
               );
             })}
+            {console.log(projects)}
           </tr>
         </tbody>
       </table>
