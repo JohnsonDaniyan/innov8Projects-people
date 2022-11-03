@@ -9,17 +9,18 @@ export default function App() {
     if (!projects.includes(person.project)) {
       projects.push(person.project);
       groupedProjects[person.project] = [
-        people[people.findIndex((people) => people.project === person.project)]
+        people[people.findIndex((people) => people.project === person.project)],
       ];
     } else {
       groupedProjects[person.project].push(person);
     }
   });
   console.log(groupedProjects);
+  console.log();
 
   return (
     <div className="px-20 w-screen">
-      <table className="border w-full table-fixed">
+      <table className="w-full table-fixed">
         <thead>
           <tr className="h-0 opacity-0">
             <td>1</td>
@@ -32,56 +33,30 @@ export default function App() {
           </tr>
         </thead>
         <tbody>
-          <tr className="h-fit">
-            <td colSpan="4" className="bg-gray-800 text-center text-white p-5">
-              <div className="people w-fill justify-between h-10 flex ">
-                <div className="person self-center w-fit flex  flex-col align-center">
-                  <div className="img w-20 h-20 aspect-square bg-blue-300 rounded-full"></div>
-                  <h2 className=" inline" style={{ width: "fit-content" }}>
-                    Name
-                  </h2>
-                </div>
-                <div className="person self-center w-fit flex  flex-col align-center">
-                  <div className="img w-20 h-20 bg-blue-300 rounded-full"></div>
-                  <h2 className=" inline" style={{ width: "fit-content" }}>
-                    Name
-                  </h2>
-                </div>
-                <div className="person self-center w-fit flex  flex-col align-center">
-                  <div className="img w-20 h-20 bg-blue-300 rounded-full"></div>
-                  <h2 className=" inline" style={{ width: "fit-content" }}>
-                    Name
-                  </h2>
-                </div>
-                <div className="person self-center w-fit flex  flex-col align-center">
-                  <div className="img w-20 h-20 bg-blue-300 rounded-full"></div>
-                  <h2 className=" inline" style={{ width: "fit-content" }}>
-                    Name
-                  </h2>
-                </div>
-              </div>
-              <h1 className="mt-10">
-                Title of <br />
-                project here
-              </h1>
-            </td>
-            <td className="bg-gray-300">
-              <div className="people w-fill justify-between h-10 flex ">
-                <div className="person self-center w-fit flex  flex-col align-center">
-                  <div className="img w-20 h-20 bg-blue-300 rounded-full"></div>
-                  <h2 className=" inline" style={{ width: "fit-content" }}>
-                    Name
-                  </h2>
-                </div>
-              </div>
-              <h1 className="mt-10">
-                Title of <br />
-                project here
-              </h1>
-            </td>
-            <td colSpan="2" className="bg-gray-200">
-              rr
-            </td>
+          <tr className="h-fit text-white text-xl py-40">
+            {projects.map((project) => {
+              return (
+                <td
+                  className="text-center bg-gray-700 border-8 border-gray-900"
+                  colSpan={groupedProjects[project].length}
+                >
+                  <ul className="flex justify-around my-10">
+                    {groupedProjects[project].map((person) => {
+                      {
+                        console.log(person.name);
+                      }
+                      return (
+                        <li>
+                          <h1>{person.name}</h1>
+                          <div className="w-10 h-10 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <h1 className="capitalize">{project}</h1>
+                </td>
+              );
+            })}
           </tr>
         </tbody>
       </table>
