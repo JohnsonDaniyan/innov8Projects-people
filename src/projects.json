@@ -1,0 +1,24 @@
+{
+  "people": [
+    {
+      "name": "Peter",
+      "project": "gingerel"
+    },
+    {
+      "name": "John",
+      "project": "soiless farms"
+    },
+    {
+      "name": "Kayode",
+      "project": "gingerel"
+    },
+    {
+      "name": "Oge",
+      "project": "soiless farms"
+    },
+    {
+      "name": "John",
+      "project": "baseline"
+    }
+  ]
+}
