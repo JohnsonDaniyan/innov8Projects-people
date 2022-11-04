@@ -19,13 +19,10 @@ export default function App() {
   console.log();
 
   return (
-    <main className="grid text-white">
-      <div>
-        
-        <h1>Name</h1>
-        <div className="w-10 h-10 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
-        
-      </div>
+    <main className="text-center text-white px-10">
+      {projects.map((project) => {
+        return <Card group={groupedProjects} proj={project} />;
+      })}
     </main>
 
     // <div className="px-20 w-screen">
@@ -74,3 +71,27 @@ export default function App() {
     // </div>
   );
 }
+
+const Card = (props) => {
+  return (
+    <div className=" text-center flex flex-col align-center items-center border border-white py-5 md:py-20 max-w-screen-lg mx-auto">
+      <ul className="flex w-full justify-evenly">
+        {props.group[props.proj].map((person) => {
+          console.log(props);
+          return (
+            <li className="flex flex-col items-center md:text-2xl" key={person}>
+              {console.log(person.name)}
+              <h1>{person.name}</h1>
+              <div className="w-16 h-16 md:w-20 md:h-20 lg:w-40 lg:h-40 rounded-full bg-gray-600"></div>
+            </li>
+          );
+        })}
+      </ul>
+      {/* <h1 className="capitalize mb-5">{props.proj}</h1> */}
+      <div className="capitalize my-5 md:my-10 md:text-4xl text-2xl ">
+        <p className="text-base text-gray-300">Project</p>
+        {props.proj}
+      </div>
+    </div>
+  );
+};

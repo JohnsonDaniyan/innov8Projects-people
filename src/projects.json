@@ -1,7 +1,15 @@
 {
   "people": [
     {
-      "name": "Peter",
+      "name": "Dupe",
+      "project": "aqua-res"
+    },
+    {
+      "name": "Nizor",
+      "project": "gingerel"
+    },
+    {
+      "name": "Toyin",
       "project": "gingerel"
     },
     {
@@ -9,24 +17,12 @@
       "project": "soiless farms"
     },
     {
-      "name": "Kayode",
-      "project": "gingerel"
+      "name": "Nizor",
+      "project": "aqua-res"
     },
     {
-      "name": "Oge",
-      "project": "soiless farms"
-    },
-    {
-      "name": "John",
-      "project": "baseline"
-    },
-    {
-      "name": "Philip",
-      "project": "baseline"
-    },
-    {
-      "name": "Hamza",
-      "project": "soiless farms"
+      "name": "Dupe",
+      "project": "aqua-res"
     }
   ]
 }
