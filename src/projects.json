@@ -1,28 +1,28 @@
 {
   "people": [
     {
-      "name": "Dupe",
-      "project": "aqua-res"
+      "name": "Josiah",
+      "project": "gingerel"
     },
     {
-      "name": "Nizor",
+      "name": "Kene",
       "project": "gingerel"
     },
     {
       "name": "Toyin",
-      "project": "gingerel"
+      "project": "Project"
     },
     {
-      "name": "John",
-      "project": "soiless farms"
+      "name": "Josiah",
+      "project": "Soliless Farms"
+    },
+    {
+      "name": "Toyin",
+      "project": "Soliless Farms"
     },
     {
       "name": "Nizor",
-      "project": "aqua-res"
-    },
-    {
-      "name": "Dupe",
-      "project": "aqua-res"
+      "project": "Soliless Farms"
     }
   ]
 }
