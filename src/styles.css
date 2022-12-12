@@ -1,4 +1,16 @@
+body {
+  background-color: white;
+}
 .App {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
+}
+@media screen and (display-mode: standalone) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+  main {
+    padding-top: 7rem;
+    margin-top: env(safe-area-inset-top);
+  }
 }
