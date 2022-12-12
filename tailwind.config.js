@@ -15,6 +15,9 @@ module.exports = {
         "auto-fit": "repeat(auto-fit, minmax(0, 1fr))",
         "auto-fill": "repeat(auto-fill, minmax(0, 1fr))",
       },
+      screens: {
+        standalone: { raw: "(display-mode: standalone)" },
+      },
     },
   },
 };

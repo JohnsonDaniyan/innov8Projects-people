@@ -15,3 +15,10 @@
     font-size: 2rem;
   }
 }
+@media screen and (display-mode: standalone) {
+  .Ih {
+    height: 88px !important;
+    position: fixed;
+    top: 0;
+  }
+}
